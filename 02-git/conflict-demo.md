@@ -1,1 +1,1 @@
-Line: original
+Line: changed by B
