@@ -1,48 +1,48 @@
-﻿# Linux Commands Cheat Sheet
+# Linux Commands Cheat Sheet
 
-## Files और folders
-| Command | काम |
+## Files and folders
+| Command | Purpose |
 |---|---|
-| `pwd` | अभी किस folder में हैं |
-| `ls -la` | सारी फ़ाइलें (छुपी भी) विस्तार से |
-| `cd <folder>` / `cd ..` | folder में जाना / एक ऊपर जाना |
-| `mkdir -p a/b` | folder बनाना |
-| `touch f.txt` | खाली फ़ाइल बनाना |
-| `cp a b` / `mv a b` | copy / move या rename |
-| `rm -r <folder>` | मिटाना (सावधानी से) |
+| `pwd` | Show current folder |
+| `ls -la` | List all files with details |
+| `cd <folder>` / `cd ..` | Go into a folder / go up one level |
+| `mkdir -p a/b` | Create folders |
+| `touch f.txt` | Create an empty file |
+| `cp a b` / `mv a b` | Copy / move or rename |
+| `rm -r <folder>` | Delete (be careful) |
 
-## देखना और खोजना
-| Command | काम |
+## View and search
+| Command | Purpose |
 |---|---|
-| `cat f` / `less f` | फ़ाइल पढ़ना |
-| `head -n 5 f` / `tail -f f` | शुरू की 5 लाइन / live log देखना |
-| `grep "text" f` | फ़ाइल में text खोजना |
-| `find . -name "*.log"` | फ़ाइल खोजना |
-| `wc -l f` | लाइनें गिनना |
+| `cat f` / `less f` | Read a file |
+| `head -n 5 f` / `tail -f f` | First 5 lines / follow a log live |
+| `grep "text" f` | Search text in a file |
+| `find . -name "*.log"` | Find files |
+| `wc -l f` | Count lines |
 
 ## Permissions
-| Command | काम |
+| Command | Purpose |
 |---|---|
-| `chmod 755 f` | अनुमतियाँ बदलना |
-| `chown user:group f` | मालिक बदलना |
-| `sudo <cmd>` | admin की तरह चलाना |
+| `chmod 755 f` | Change permissions |
+| `chown user:group f` | Change owner |
+| `sudo <cmd>` | Run as admin |
 
-## Processes और system
-| Command | काम |
+## Processes and system
+| Command | Purpose |
 |---|---|
-| `ps aux` / `top` | चल रहे processes |
-| `kill <pid>` | process रोकना |
-| `df -h` / `free -h` | disk / RAM |
-| `systemctl status nginx` | service की स्थिति |
-| `journalctl -u nginx` | service के logs |
+| `ps aux` / `top` | Running processes |
+| `kill <pid>` | Stop a process |
+| `df -h` / `free -h` | Disk / RAM |
+| `systemctl status nginx` | Service status |
+| `journalctl -u nginx` | Service logs |
 
 ## Network
-| Command | काम |
+| Command | Purpose |
 |---|---|
-| `ping google.com` | connection जाँचना |
-| `curl -I https://example.com` | HTTP header देखना |
-| `ss -tulpn` | खुले ports |
-| `ssh user@host` | दूर के server में जाना |
+| `ping google.com` | Check connectivity |
+| `curl -I https://example.com` | Show HTTP headers |
+| `ss -tulpn` | Open ports |
+| `ssh user@host` | Log in to a remote server |
 
-## Pipe का उदाहरण
+## Pipe example
 `ps aux | grep nginx | wc -l`
